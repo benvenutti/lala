@@ -14,6 +14,7 @@ This is a simple cmake template project to link *dynamically* against [libpd](ht
 ## How to build
 
 ```sh
+$ pip3 install --user -r hmb/requirements.txt
 $ python3 hmb/run.py
 $ mkdir build && cd build
 $ cmake ..
