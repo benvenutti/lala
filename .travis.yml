@@ -3,6 +3,15 @@ language: cpp
 matrix:
   include:
     # ---------------------------------------------------------------------------------------------
+    # osx appleclang 10
+
+    - os: osx
+      osx_image: xcode10
+      env: MATRIX_EVAL="brew install jack" BUILD_TYPE=Release
+
+      # TODO add debug
+
+    # ---------------------------------------------------------------------------------------------
     # linux gcc-6
 
     - os: linux
