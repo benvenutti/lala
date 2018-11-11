@@ -19,7 +19,7 @@ set( CMAKE_CXX_FLAGS_RELEASE -O3 )
 # 3rd party dependencies:
 
 set( Boost_USE_STATIC_LIBS ON )
-find_package( Boost 1.67 REQUIRED )
+find_package( Boost REQUIRED )
 find_package( libpd REQUIRED )
 find_package( Jack REQUIRED )
 
