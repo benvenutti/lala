@@ -18,6 +18,10 @@ matrix:
 before_install:
   - eval "${MATRIX_EVAL}"
 
+install: 
+  - pip --version
+  - pip install --user -r hmb/requirements.txt
+
 script:
   - python3 hmb/run.py
   - mkdir build && cd build
