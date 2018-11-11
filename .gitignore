@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# build folder
+**/build
+
+# 3rd party build foler
+**/3rd-party
+
+# temporary user files
+**/CMakeLists.txt.user
