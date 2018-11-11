@@ -47,11 +47,6 @@ before_install:
 
 script:
   - python3 hmb/run.py
-  - cd 3rd-party
-  - cd libpd
-  - cd bin
-  - ls -la
-  - cd ../..
   - mkdir build && cd build
   - cmake ..
   - cmake --build .

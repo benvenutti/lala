@@ -8,7 +8,13 @@ set( libpdIncludes
     ${libPath}/libpd_wrapper/util 
     ${libPath}/pure-data/src )
 
+if( APPLE )
+	set( libpdLocation ${libPath}/bin/libpd.dylib )
+else()
+	set( libpdLocation ${libPath}/bin/libpd.so )
+endif()
+
 set_target_properties( libpd
     PROPERTIES
-    IMPORTED_LOCATION ${libPath}/bin/libpd.so
+    IMPORTED_LOCATION "${libpdLocation}"
     INTERFACE_INCLUDE_DIRECTORIES "${libpdIncludes}" )
