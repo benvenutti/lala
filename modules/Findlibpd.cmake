@@ -9,9 +9,9 @@ set( libpdIncludes
     ${libPath}/pure-data/src )
 
 if( APPLE )
-	set( libpdLocation ${libPath}/bin/libpd.dylib )
+    set( libpdLocation ${libPath}/bin/libpd.dylib )
 else()
-	set( libpdLocation ${libPath}/bin/libpd.so )
+    set( libpdLocation ${libPath}/bin/libpd.so )
 endif()
 
 set_target_properties( libpd
