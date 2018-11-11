@@ -3,13 +3,26 @@ language: cpp
 matrix:
   include:
     # ---------------------------------------------------------------------------------------------
+    # osx appleclang 9
+
+    - os: osx
+      osx_image: xcode9
+      env: MATRIX_EVAL="brew install jack" BUILD_TYPE=Release
+
+    - os: osx
+      osx_image: xcode9
+      env: MATRIX_EVAL="brew install jack" BUILD_TYPE=Debug
+
+    # ---------------------------------------------------------------------------------------------
     # osx appleclang 10
 
     - os: osx
       osx_image: xcode10
       env: MATRIX_EVAL="brew install jack" BUILD_TYPE=Release
 
-      # TODO add debug
+    - os: osx
+      osx_image: xcode10
+      env: MATRIX_EVAL="brew install jack" BUILD_TYPE=Debug
 
     # ---------------------------------------------------------------------------------------------
     # linux gcc-6
@@ -40,10 +53,7 @@ matrix:
 
 before_install:
   - eval "${MATRIX_EVAL}"
-  - pip3 --version
   - pip3 install --user -r hmb/requirements.txt
-  - pwd
-  - ls -la
 
 script:
   - python3 hmb/run.py
