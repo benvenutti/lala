@@ -20,13 +20,13 @@ before_install:
   - pip3 --version
   - pip3 install --user -r hmb/requirements.txt
   - pwd
-  - ll
+  - ls -la
 
 script:
   - python3 hmb/run.py
   - mkdir build && cd build
   - cmake ..
-  - cmake --build
+  - cmake --build .
 
 notifications:
   email: false
